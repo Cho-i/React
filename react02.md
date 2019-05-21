@@ -23,3 +23,27 @@ JSX를 비롯한 새로운 자바스크립트 문법들을 사용하기 위해 B
 - Node.js : Webpack과 Babel 같은 도구들이 자바스크립트 런타임인 Node.js 를 기반으로 만들어짐.
 - Yarn : Yarn은 조금 개선된 버전의 npm. npm은 Node.js를 설치할 때 같이 딸려오는 패키지 매니저 도구. 프로젝트에서 사용되는 라이브러리를 설치하고 해당 라이브러리들의 버전 관리를 하게 될 때 사용. **더 나은 속도, 더 나은 캐싱 시스템**을 사용하기 위해.
 
+
+
+### create-react-app
+
+리액트 앱을 만들어주는 도구 설치.
+
+`npm install -g create-react-app`
+
+`yarn global add create-react-app`
+
+
+
+hello-react 프로젝트 생성.
+
+`create-react-app hello-react`
+
+
+
+리액트 프로젝트 시작.
+
+`cd hello-react `
+
+`yarn start`
+
