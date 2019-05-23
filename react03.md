@@ -2,7 +2,7 @@
 
 리액트를 사용하면 웹 애플리케이션에서 사용하는 유저 인터페이스를 재사용 가능한 컴포넌트로 분리하여 작성함으로서, 프로젝트의 유지보수성을 우수하게 해줌.
 
-
+<br/>
 
 ### 컴포넌트 파일
 
@@ -49,7 +49,7 @@ class App extends Component{
 
 그리고 그 내부에서는 JSX를 return 해주어야 함.
 
-
+<br/>
 
 작성한 컴포넌트를 다른 곳에서 불러와서 사용 할 수 있도록 내보내기를 해줌.
 
@@ -57,7 +57,7 @@ class App extends Component{
 export default App;
 ```
 
-
+<br/>
 
 **index.js**
 
@@ -67,7 +67,7 @@ export default App;
 import App from './App';
 ```
 
-
+<br/>
 
 브라우저 상에 리액트 컴포넌트를 보여주기 위해서 `ReactDOM.render` 함수를 사용. 
 
@@ -79,7 +79,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 id가 root인 DOM을 찾아서 그리도록 설정. 
 
-
+<br/>
 
 **public/index.html**
 
@@ -89,7 +89,7 @@ id가 root인 DOM을 찾아서 그리도록 설정.
 
 이 부분을 찾아서 렌더링 해줌.
 
-
+<br/>
 
 ### JSX
 
@@ -103,7 +103,7 @@ id가 root인 DOM을 찾아서 그리도록 설정.
 
 XML 형태의 코드를 자바스크립트로 변환해야 하기 때문에 JSX를 제대로 사용하기 위해 몇가지 규칙을 준수해야함.
 
-
+<br/>
 
 **태그를 꼭 닫아야함**
 
@@ -115,13 +115,13 @@ XML 형태의 코드를 자바스크립트로 변환해야 하기 때문에 JSX�
 
 태그를 안 닫으면 <u>오류</u>남.
 
-
+<br/>
 
 **감싸져 있는 엘리먼트**
 
 두개 이상의 엘리먼트는 무조건 하나의 엘리먼트로 감싸져야함.
 
-1. div로 감싸기.
+1.div로 감싸기.
 
 ```jsx
 import React, { Component } from 'react';
@@ -139,7 +139,7 @@ class App extends Component{
 export default App;
 ```
 
-2. Fragment 사용(v16.2)
+2.Fragment 사용(v16.2)
 
 ```jsx
 import React, { Component, Fragment } from 'react';
@@ -157,7 +157,9 @@ class App extends Component{
 export default App;
 ```
 
+Fragments : <https://ko.reactjs.org/docs/fragments.html>
 
+<br/>
 
 ### **JSX 안에 자바스크립트 값 사용하기**
 
@@ -177,17 +179,19 @@ class App extends Component{
 export default App;
 ```
 
-
+<br/>
 
 **ES6 (const/let)**
 
 > 전에 잠깐 정리한거 : <https://github.com/Cho-i/Study/blob/master/Note/Note.md>
 >
+> 쥬팀 ES6 정리 : [https://github.com/jewdri-kim/javascriptStudy/blob/master/ES6/1%EC%9E%A5%20%EB%AC%B8%EB%B2%95%EB%A7%9B%EB%B3%B4%EA%B8%B0_v2.md](https://github.com/jewdri-kim/javascriptStudy/blob/master/ES6/1장 문법맛보기_v2.md)
+>
 > const : 한번 선언하고 바뀌지 않는 값
 >
 > let : 바뀌게 될 수 있는 값
 
-
+<br/>
 
 **var 와 작동 방식에 있어서 scope가 다름**
 
@@ -217,7 +221,7 @@ function foo(){
 }
 ```
 
-
+<br/>
 
 ### 조건부 렌더링
 
@@ -225,7 +229,7 @@ JSX 내부에서 조건부 렌더링을 할 때 삼항 연산자를 사용하거
 
 **if문 사용 할 수 없음!** 사용할라면 **IIFE**(즉시 실행 함수 표현)을 사용해야함.
 
-
+<br/>
 
 **삼항연산자**
 
@@ -248,7 +252,7 @@ class App extends Component{
 export default App;
 ```
 
-
+<br/>
 
 **AND 연산자**
 
@@ -271,7 +275,7 @@ export default App;
 
 삼항연산자는 true/false 일 때 다른것들을 보이게, AND 연산자는 단순히 조건이 ture 일 때만 보이게 하고 flase 일때는 아무것도 보이지 않게함.
 
-
+<br/>
 
 **IIFE(즉시 실행 함수 표현)**
 
@@ -303,7 +307,7 @@ export default App;
 
 ps. if문 대신 switch문 사용해도됨.
 
-
+<br/>
 
 **화살표함수**
 
@@ -315,21 +319,102 @@ ps. if문 대신 switch문 사용해도됨.
 })()
 ```
 
-화살표 함수 : <https://poiemaweb.com/es6-arrow-function>
+> 화살표 함수 : <https://poiemaweb.com/es6-arrow-function>
+>
+> 화살표 함수 표현(arrow function exprssion)은 function 표현에 비해 구문이 짧고 자신의 this, arguments, super, new.target을 바인딩 하지 않음. 
+>
+> 화살표 함수는 항상 익명, 메소드 함수가 아닌 곳에 가장 적합. 
+>
+> 생성자로 사용할 수 없음.
 
-
+<br/>
 
 ### style & className
 
+**style**
 
+```jsx
+import React, { Component } from 'react';
 
+class App extends Component{
+    render(){
+        const style = {
+            backgroundColor:'black',
+            padding:'16px',
+            color:'white',
+            fontSize:'12px'
+        };
+        return(
+        	<div style={style}>
+                hi there
+            </div>
+        );
+    }
+}
+export default App;
+```
 
+html 에서는 `<div style="backgroundColor:black;padding:16px;..."></div>` ,
 
+리액트에서는 객체 형태로 작성해야함.
+<br/>
 
+**className**
 
+App.css
 
+```css
+.App{
+    background:#000;
+    color:pink;
+    font-size:36px;
+    padding:1rem;
+    font-weight:600;
+}
+```
 
+<br/>
 
+App.js
 
+```jsx
+import React, { Component } from 'react';
+import './App.css';
 
+class App extends Component{
+    render(){
+        return(
+        	<div className="App">리액트</div>
+        );
+    }
+}
+export default App;
+```
+
+html 에서는 `<div class="hello"></div>` ,
+
+리액트 컴포넌트에서는 class 대신에 className을 사용.
+
+<br/>
+
+### 주석
+
+```jsx
+import React, { Component } from 'react';
+
+class App extends Component{
+    render(){
+        return(
+        	<div>
+                {/* 주석 달기 */}
+                <h1 //태그사이에 달기
+                    >리액트</h1>            
+            </div>
+        );
+    }
+}
+export default App;
+```
+
+`{/* ... */}` or `//...` 태그 사이에 넣을 수도 있음.
 

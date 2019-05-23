@@ -6,7 +6,16 @@
 
 3. ## [JSX](/react03.md)
 
+<br/>
 
+출처
 
-출처 : <https://velopert.com/3613>
+<https://velopert.com/3613>
 
+<https://ko.reactjs.org/docs/getting-started.html>
+
+<br/>
+
+참고
+
+<http://sideeffect.kr/popularconvention/#javascript>
