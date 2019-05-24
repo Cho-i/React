@@ -23,19 +23,11 @@ import를 하는것은 webpack을 사용하기에 가능한 작업. 이렇게 �
 
 컴포넌트를 만드는 방법은 두가지 [클래스 or 함수]
 
-**함수**
-
-```jsx
-function App(){
-    return(
-    	...
-    )
-}
-```
-
 **클래스**
 
 ```jsx
+import React, { Component } from 'react';
+
 class App extends Component{
     render(){
         return(
@@ -45,9 +37,25 @@ class App extends Component{
 }
 ```
 
+리액트에서 컴포넌트를 정의 할 때 보통 class 문법 사용. 컴포넌트에서 라이프사이클 API를 사용해야 하거나, state를 사용하는 경우에는 이렇게 정의.
+
 클래스 형태로 만들어진 컴포넌트에는 꼭, render 함수가 있어야 함.
 
 그리고 그 내부에서는 JSX를 return 해주어야 함.
+
+**함수**
+
+```jsx
+import React from 'react';
+
+function App(){
+    return(
+    	...
+    )
+}
+```
+
+컴포넌트가 라이프사이클 API & state 사용 안하고, 그냥 props만 전달해 뷰를 렌더링만 해주는 역할이라면 함수형 컴포넌트 형식으로 정의 할 수 있음.
 
 <br/>
 
@@ -159,6 +167,8 @@ export default App;
 
 Fragments : <https://ko.reactjs.org/docs/fragments.html>
 
+축약 형태가 모든 툴에서 지원하는게 아니라 `<react.fragment></react.fragment>` 해야할수 있음.
+
 <br/>
 
 ### **JSX 안에 자바스크립트 값 사용하기**
@@ -183,7 +193,7 @@ export default App;
 
 **ES6 (const/let)**
 
-> 전에 잠깐 정리한거 : <https://github.com/Cho-i/Study/blob/master/Note/Note.md>
+> 전에 Vue에서 정리한거 : <https://cho-i.github.io/Vue-Quick-Start/07/>
 >
 > 쥬팀 ES6 정리 : [https://github.com/jewdri-kim/javascriptStudy/blob/master/ES6/1%EC%9E%A5%20%EB%AC%B8%EB%B2%95%EB%A7%9B%EB%B3%B4%EA%B8%B0_v2.md](https://github.com/jewdri-kim/javascriptStudy/blob/master/ES6/1장 문법맛보기_v2.md)
 >
