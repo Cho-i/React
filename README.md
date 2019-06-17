@@ -10,6 +10,12 @@
 
 <br/>
 
+1주차(19.05.27) : <https://github.com/kimhyoyeong/react/tree/master/section01>
+
+2주차(19.06.18) : https://cho-i.github.io/React/
+
+<br/>
+
 **출처**
 
 <https://velopert.com/3613>

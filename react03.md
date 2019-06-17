@@ -1,27 +1,78 @@
 ## JSX
 
-리액트를 사용하면 웹 애플리케이션에서 사용하는 유저 인터페이스를 재사용 가능한 컴포넌트로 분리하여 작성함으로서, 프로젝트의 유지보수성을 우수하게 해줌.
 
-<br/>
 
 ### 컴포넌트 파일
 
-**App.js (컴포넌트에 해당하는 코드)**
+![img](https://i.imgur.com/v4xX4Tr.png)
+
+hello-react 프로젝트가 다음과 같이 구성되어 있을것.
+
+리액트를 사용하면 웹 애플리케이션에서 사용하는 유저 인터페이스를 재사용 가능한 컴포넌트로 분리하여 작성함으로서, 프로젝트의 유지보수성을 우수하게 해줌.
+
+
+
+**App.js (컴포넌트에 해당하는 코드를 확인해 볼 수 있음)**
 
 ```jsx
-//import React from 'react';
 import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">Welcome to React</h1>
+        </header>
+        <p className="App-intro">
+          To get started, edit <code>src/App.js</code> and save to reload.
+        </p>
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
+<br/>
+
+> **ES2015(ES6)**
+>
+> <u>기본이 ES6라 많이 공부해야 할듯.</u>
+>
+> 모듈 import/export : <https://poiemaweb.com/es6-module>
+>
+> Class : <https://poiemaweb.com/es6-class>
+>
+> 쥬팀 ES6 정리 : [https://github.com/jewdri-kim/javascriptStudy/blob/master/ES6/1%EC%9E%A5%20%EB%AC%B8%EB%B2%95%EB%A7%9B%EB%B3%B4%EA%B8%B0_v2.md](https://github.com/jewdri-kim/javascriptStudy/blob/master/ES6/1장 문법맛보기_v2.md)
+>
+> 전에 Vue에서 정리한거 : <https://cho-i.github.io/Vue-Quick-Start/07/>
+>
+> const : 한번 선언하고 바뀌지 않는 값
+>
+> let : 바뀌게 될 수 있는 값
+
+<br/>
+
+import 한다는건 무엇을 불러온다는 것.
+
+```jsx
+//리액트와 그 내부의 Component를 불러옴
+import React, { Component } from 'react';
+//같은 디렉토리에 있는 파일 logo.svg 과 App.css 파일을 불러옴
 import logo from './logo.svg';
 import './App.css';
 ```
 
-import 한다는건 무엇을 불러온다는 것.
 
-파일에서 JSX를 사용하려면,  꼭 React를 import 해줘야함.
 
-import를 하는것은 webpack을 사용하기에 가능한 작업. 이렇게 불러오고나면 나중에 프로젝트를 빌드하게 됐을 때 웹팩에서 파일의 확장자에 따라 다른 작업을 하게 됨.
 
-컴포넌트를 만드는 방법은 두가지 [클래스 or 함수]
+
+컴포넌트를 만드는 방법은 두가지 (클래스 or 함수)
 
 **클래스**
 
@@ -107,6 +158,8 @@ id가 root인 DOM을 찾아서 그리도록 설정.
 
 <!--React 라이브러리에서 UI를 구성할 때 사용하는 구문으로 Javascript의 extension이라고 할 수 있음.-->
 
+<https://babeljs.io/repl>
+
 리액트 개발을 쉽게 하기 위해, HTML과 비슷한 문법으로 작성을 하면 이를 React.createElement를 사용하는 자바스크립트 형태로 변환시켜줌.
 
 XML 형태의 코드를 자바스크립트로 변환해야 하기 때문에 JSX를 제대로 사용하기 위해 몇가지 규칙을 준수해야함.
@@ -190,16 +243,6 @@ export default App;
 ```
 
 <br/>
-
-**ES6 (const/let)**
-
-> 전에 Vue에서 정리한거 : <https://cho-i.github.io/Vue-Quick-Start/07/>
->
-> 쥬팀 ES6 정리 : [https://github.com/jewdri-kim/javascriptStudy/blob/master/ES6/1%EC%9E%A5%20%EB%AC%B8%EB%B2%95%EB%A7%9B%EB%B3%B4%EA%B8%B0_v2.md](https://github.com/jewdri-kim/javascriptStudy/blob/master/ES6/1장 문법맛보기_v2.md)
->
-> const : 한번 선언하고 바뀌지 않는 값
->
-> let : 바뀌게 될 수 있는 값
 
 <br/>
 
