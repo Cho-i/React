@@ -420,7 +420,7 @@ class App extends Component{
                 <div style={style}>
                     hi there
                 </div>
-                <div style={{backgroundColor:'black',padding:'16px',color:'white',fontSize:'12px'}}>
+                <div style={{backgroundColor:'black',color:'white'}}>
                     hi there
                 </div>
             </div>
