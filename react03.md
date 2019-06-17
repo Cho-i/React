@@ -50,9 +50,6 @@ export default App;
 >
 > 전에 Vue에서 정리한거 : <https://cho-i.github.io/Vue-Quick-Start/07/>
 >
-> const : 한번 선언하고 바뀌지 않는 값
->
-> let : 바뀌게 될 수 있는 값
 
 <br/>
 
