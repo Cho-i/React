@@ -1,7 +1,5 @@
 ## JSX
 
-
-
 ### 컴포넌트 파일
 
 ![img](https://i.imgur.com/v4xX4Tr.png)
@@ -10,7 +8,7 @@ hello-react 프로젝트가 다음과 같이 구성되어 있을것.
 
 리액트를 사용하면 웹 애플리케이션에서 사용하는 유저 인터페이스를 재사용 가능한 컴포넌트로 분리하여 작성함으로서, 프로젝트의 유지보수성을 우수하게 해줌.
 
-
+<br/>
 
 **App.js (컴포넌트에 해당하는 코드를 확인해 볼 수 있음)**
 
@@ -68,9 +66,7 @@ import logo from './logo.svg';
 import './App.css';
 ```
 
-
-
-
+<br/>
 
 컴포넌트를 만드는 방법은 두가지 (클래스 or 함수)
 
@@ -156,7 +152,7 @@ id가 root인 DOM을 찾아서 그리도록 설정.
 
 ![img](https://i.imgur.com/SZshYmi.png)
 
-<!--React 라이브러리에서 UI를 구성할 때 사용하는 구문으로 Javascript의 extension이라고 할 수 있음.-->
+**JSX : React 라이브러리에서 UI를 구성할 때 사용하는 구문으로 Javascript의 extension이라고 할 수 있음.**
 
 <https://babeljs.io/repl>
 
@@ -166,7 +162,7 @@ XML 형태의 코드를 자바스크립트로 변환해야 하기 때문에 JSX�
 
 <br/>
 
-**태그를 꼭 닫아야함**
+#### 태그를 꼭 닫아야함
 
 `<div></div>`
 
@@ -178,7 +174,7 @@ XML 형태의 코드를 자바스크립트로 변환해야 하기 때문에 JSX�
 
 <br/>
 
-**감싸져 있는 엘리먼트**
+#### 감싸져 있는 엘리먼트
 
 두개 이상의 엘리먼트는 무조건 하나의 엘리먼트로 감싸져야함.
 
@@ -200,9 +196,14 @@ class App extends Component{
 export default App;
 ```
 
+단순히 감싸기 위해 새로운 div를 사용하는게 스타일 관련 , table 관련 태그를 작성 할 때 번거로워 질 수 있음.
+
+<br/>
+
 2.Fragment 사용(v16.2)
 
 ```jsx
+//Fragment를 React를 import 하는 라인에서 같이 import함
 import React, { Component, Fragment } from 'react';
 
 class App extends Component{
@@ -218,13 +219,17 @@ class App extends Component{
 export default App;
 ```
 
-Fragments : <https://ko.reactjs.org/docs/fragments.html>
+Fragment : <https://ko.reactjs.org/docs/fragments.html>
 
-축약 형태가 모든 툴에서 지원하는게 아니라 `<react.fragment></react.fragment>` 해야할수 있음.
+Fragment 태그는 React에서 div를 추가해 감싸고 싶지는 않지만 다른 태그를 감쌀 필요성이 있을 때 사용할 수 있도록 React에서 제공하는 태그.
+
+Fragment를 사용하는 3가지 방법 : <https://stackoverflow.com/questions/52330679/whats-the-difference-between-importing-reacts-fragment-from-react-and-react>
+
+아직 많은 툴에서 지원을 하지 않아 `React.Fragment` 라고 사용하는 것이 좋음.
 
 <br/>
 
-### **JSX 안에 자바스크립트 값 사용하기**
+#### JSX 안에 자바스크립트 값 사용하기
 
 ```jsx
 import React, { Component } from 'react';
@@ -242,7 +247,17 @@ class App extends Component{
 export default App;
 ```
 
+JSX 안에서 JavaScript 값을 사용할 땐 중괄호를 사용함.
+
+중괄호 안에 변수명을 입력하거나 JavaScript 계산식, 값 등을 넣을 수 있음.
+
 <br/>
+
+> **ES2015(ES6)**
+>
+> const : 한번 선언하고 바뀌지 않는 값
+>
+> let : 바뀌게 될 수 있는 값
 
 <br/>
 
@@ -276,11 +291,21 @@ function foo(){
 
 <br/>
 
-### 조건부 렌더링
+#### 조건부 렌더링
 
 JSX 내부에서 조건부 렌더링을 할 때 삼항 연산자를 사용하거나 AND 연산자 사용.
 
-**if문 사용 할 수 없음!** 사용할라면 **IIFE**(즉시 실행 함수 표현)을 사용해야함.
+**if문을 사용하려면 **IIFE(즉시 실행 함수 표현)을 사용해야함.
+
+즉시 실행 함수 표현(IIFE, Immediately Invoked Function Expression) : <https://developer.mozilla.org/ko/docs/Glossary/IIFE>
+
+IIFE은 정의되자마자 즉시 실행되는 Javascript Function.
+
+```javascript
+(function () {
+    statements
+})();
+```
 
 <br/>
 
@@ -354,11 +379,7 @@ class App extends Component{
 export default App;
 ```
 
-복잡한 조건을 작성해야 할 때 웬만하면 JSX 밖에서 작성하넌 것이 좋음.
-
-꼭 JSX 내부에서 작성해야 하면, IIFE를 사용.
-
-ps. if문 대신 switch문 사용해도됨.
+대부분 삼항, AND 연산자로 해결 할 수 있지만, 복잡한 조건을 작성해야 할때는 웬만하면 JSX 밖에서 로직을 작성하는것이 좋음. 꼭 JSX 내부에 작성해야 한다면, IIFE를 사용.
 
 <br/>
 
@@ -382,7 +403,7 @@ ps. if문 대신 switch문 사용해도됨.
 
 <br/>
 
-### style & className
+#### style & className
 
 **style**
 
@@ -398,8 +419,13 @@ class App extends Component{
             fontSize:'12px'
         };
         return(
-        	<div style={style}>
-                hi there
+            <div>
+                <div style={style}>
+                    hi there
+                </div>
+                <div style={{backgroundColor:'black',padding:'16px',color:'white',fontSize:'12px'}}>
+                    hi there
+                </div>
             </div>
         );
     }
@@ -407,9 +433,10 @@ class App extends Component{
 export default App;
 ```
 
-html 에서는 `<div style="backgroundColor:black;padding:16px;..."></div>` ,
+html 에서는 `"backgroundColor:black;padding:16px;..."` ,
 
-리액트에서는 객체 형태로 작성해야함.
+리액트에서 스타일 속성은 중괄호({}) 안에 객체 형태로 표시하며 단어 사이의 ‘-‘를 없애는 대신 카멜케이스(Camel Case)를 사용해 CSS 프로퍼티를 나타냄.
+
 <br/>
 
 **className**
@@ -444,13 +471,13 @@ class App extends Component{
 export default App;
 ```
 
-html 에서는 `<div class="hello"></div>` ,
+html 에서는 `<div class="App"></div>` ,
 
 리액트 컴포넌트에서는 class 대신에 className을 사용.
 
 <br/>
 
-### 주석
+#### 주석
 
 ```jsx
 import React, { Component } from 'react';

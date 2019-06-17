@@ -12,7 +12,9 @@
 
 1주차(19.05.27) : <https://github.com/kimhyoyeong/react/tree/master/section01>
 
-2주차(19.06.18) : https://cho-i.github.io/React/
+2주차(19.06.18) : <https://cho-i.github.io/React/>
+
+3주차(19.06.24) :
 
 <br/>
 
