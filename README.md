@@ -8,6 +8,8 @@
 
 4. ## [props & state](/react04.md)
 
+5. ## [LifeCycle API](/react05.md)
+
 <br/>
 
 1주차(19.05.27) : <https://github.com/kimhyoyeong/react/tree/master/section01>
