@@ -14,7 +14,9 @@
 
 2주차(19.06.18) : <https://cho-i.github.io/React/>
 
-3주차(19.06.24) :
+3주차(19.07.01) : <https://leehyemimi.github.io/react_study/>
+
+4주차(19.07.15) : <http://bitly.kr/y3C1G5>
 
 <br/>
 
